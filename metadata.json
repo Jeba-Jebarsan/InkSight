@@ -1,0 +1,7 @@
+{
+  "name": "InkSight: Tattoo Placement Advisor",
+  "description": "An AI-powered tattoo simulator and placement advisor that helps you visualize designs on your skin, calculate boldness ratings, and track healing progress.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
