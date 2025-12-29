@@ -35,7 +35,7 @@
 - 💾 **Local Gallery** - Save and manage your tattoo simulations
 - 🔐 **Your Own API Key** - Use your own Replicate API token (no account required on our end)
 
-## 🚀 Quick Start
+## � Quick Start
 
 ### 1. Clone the repository
 
