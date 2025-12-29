@@ -12,6 +12,18 @@
   Visualize tattoo placements on your body and get AI-powered feedback before the needle touches your skin.
 </p>
 
+<p align="center">
+  <a href="demo.mp4"><strong>🎥 Watch Demo Video</strong></a>
+</p>
+
+<p align="center">
+  <em>Experience the future of tattoo visualization:</em>
+</p>
+
+<p align="center">
+  <img src="preview.png" alt="InkSight Interface Preview" width="100%">
+</p>
+
 ---
 
 ## ✨ Features
@@ -28,8 +40,8 @@
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/inksight.git
-cd inksight
+git clone https://github.com/Jeba-Jebarsan/InkSight.git
+cd InkSight
 ```
 
 ### 2. Install dependencies
@@ -59,7 +71,7 @@ That's it! The app will prompt you to enter your API token when you try to simul
 - **Frontend**: React 18 + TypeScript
 - **Build Tool**: Vite
 - **Styling**: Tailwind CSS
-- **AI Model**: Replicate API (google/nano-banana)
+- **AI Model**: Replicate API (bytedance/seedream-4 & Llama 3)
 - **Storage**: LocalStorage (no backend required)
 
 ## 📁 Project Structure
@@ -94,28 +106,18 @@ Your Replicate API token is stored **locally in your browser** (localStorage). I
 - ✅ Only stored on your device
 - ✅ Can be cleared anytime from the app
 
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## 📝 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
-## 🙏 Acknowledgments
-
-- [Replicate](https://replicate.com) for the AI model hosting
-- [Font Awesome](https://fontawesome.com) for icons
-- The tattoo community for inspiration
-
 ---
 
+<div align="center">
+
+### Ready to see how today’s choices shape tomorrow’s you?
+
+**[Clone the repo](https://github.com/Jeba-Jebarsan/InkSight) • Run your first scan • Contribute a feature 🚀**
+
+<br>
+
 <p align="center">
-  Made with ❤️ for tattoo enthusiasts everywhere
+  <a href="https://x.com/Thomas_jebarsan"><img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/x-social-media-black-icon.svg" width="15" height="15" alt="X logo"/></a> Made with ❤️ by <a href="https://x.com/Thomas_jebarsan">Jebarsan</a>
 </p>
+
+</div>

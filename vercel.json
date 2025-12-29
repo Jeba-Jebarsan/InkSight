@@ -1,0 +1,12 @@
+{
+    "rewrites": [
+        {
+            "source": "/replicate-api/:path*",
+            "destination": "https://api.replicate.com/:path*"
+        },
+        {
+            "source": "/(.*)",
+            "destination": "/index.html"
+        }
+    ]
+}
