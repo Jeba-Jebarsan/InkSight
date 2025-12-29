@@ -58,7 +58,7 @@ npm run dev
 
 ### 4. Get your Replicate API Token
 
-1. Go to [replicate.com](https://replicate.com)
+1. Go to. [replicate.com](https://replicate.com)
 2. Sign up for a free account
 3. Navigate to [API Tokens](https://replicate.com/account/api-tokens)
 4. Create a new token

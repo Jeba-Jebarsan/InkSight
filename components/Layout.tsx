@@ -31,18 +31,18 @@ const Layout: React.FC<LayoutProps> = ({ children, activeView, onNavigate }) => 
 
   return (
     <div className="min-h-screen flex flex-col">
-      <nav className="sticky top-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10 px-6 py-4 flex items-center justify-between">
+      <nav className="sticky top-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10 px-4 py-3 md:px-6 md:py-4 flex items-center justify-between">
         <div
           className="flex items-center gap-2 cursor-pointer"
           onClick={() => onNavigate(AppView.LANDING)}
         >
-          <div className="w-8 h-8 bg-white text-black flex items-center justify-center rounded-sm font-bold rotate-12">
+          <div className="w-8 h-8 bg-white text-black flex items-center justify-center rounded-sm font-bold rotate-12 flex-shrink-0">
             IN
           </div>
-          <span className="font-serif text-xl tracking-tight">InkSight</span>
+          <span className="font-serif text-xl tracking-tight hidden sm:block">InkSight</span>
         </div>
 
-        <div className="flex items-center gap-6 text-sm font-medium">
+        <div className="flex items-center gap-3 md:gap-6 text-sm font-medium">
           <button
             onClick={() => onNavigate(AppView.SIMULATOR)}
             className={`${activeView === AppView.SIMULATOR ? 'text-white' : 'text-zinc-500'} hover:text-white transition-colors`}
@@ -57,13 +57,13 @@ const Layout: React.FC<LayoutProps> = ({ children, activeView, onNavigate }) => 
             Archive
           </button>
 
-          <div className="h-4 w-px bg-zinc-800"></div>
+          <div className="h-4 w-px bg-zinc-800 hidden sm:block"></div>
 
           <a
             href="https://github.com/Jeba-Jebarsan/InkSight"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-zinc-500 hover:text-white transition-colors"
+            className="text-zinc-500 hover:text-white transition-colors hidden sm:block"
             title="View on GitHub"
           >
             <i className="fa-brands fa-github text-xl"></i>
@@ -72,9 +72,12 @@ const Layout: React.FC<LayoutProps> = ({ children, activeView, onNavigate }) => 
           {/* API Status Indicator */}
           <div className="h-4 w-px bg-zinc-800"></div>
           <div className="flex items-center gap-2 text-xs">
-            <div className={`w-2 h-2 rounded-full ${hasToken ? 'bg-emerald-500' : 'bg-amber-500 animate-pulse'}`}></div>
-            <span className={hasToken ? 'text-zinc-500' : 'text-amber-400'}>
+            <div className={`w-2 h-2 rounded-full flex-shrink-0 ${hasToken ? 'bg-emerald-500' : 'bg-amber-500 animate-pulse'}`}></div>
+            <span className={`${hasToken ? 'text-zinc-500' : 'text-amber-400'} hidden sm:inline`}>
               {hasToken ? 'API Ready' : 'Add API Key'}
+            </span>
+            <span className={`${hasToken ? 'text-zinc-500' : 'text-amber-400'} sm:hidden`}>
+              {hasToken ? 'Ready' : 'Key'}
             </span>
           </div>
         </div>

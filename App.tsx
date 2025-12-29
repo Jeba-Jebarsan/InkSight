@@ -102,11 +102,11 @@ const App: React.FC = () => {
             <div className="max-w-4xl w-full text-center space-y-8 animate-fadeIn">
               <div className="space-y-4">
                 <span className="text-xs font-bold uppercase tracking-[0.3em] text-zinc-500">Evolution of Tattooing</span>
-                <h1 className="text-6xl md:text-8xl font-serif tracking-tighter leading-none">
+                <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-serif tracking-tighter leading-none">
                   Ink Before <br />
                   <span className="text-zinc-600 italic">the Needle</span>
                 </h1>
-                <p className="text-lg md:text-xl text-zinc-400 font-light max-w-2xl mx-auto leading-relaxed">
+                <p className="text-base md:text-xl text-zinc-400 font-light max-w-2xl mx-auto leading-relaxed px-4">
                   The first AI-powered advisor for tattoo enthusiasts and artists. Visualize placements and calculate vibe ratings with precision.
                 </p>
               </div>
