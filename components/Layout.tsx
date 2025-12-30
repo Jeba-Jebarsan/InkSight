@@ -33,10 +33,17 @@ const Layout: React.FC<LayoutProps> = ({ children, activeView, onNavigate }) => 
     <div className="min-h-screen flex flex-col">
       <nav className="sticky top-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10 px-4 py-3 md:px-6 md:py-4 flex items-center justify-between">
         <div
-          className="flex items-center gap-2 cursor-pointer"
+          className="flex items-center gap-2 cursor-pointer relative group"
           onClick={() => onNavigate(AppView.LANDING)}
         >
-          <div className="w-8 h-8 bg-white text-black flex items-center justify-center rounded-sm font-bold rotate-12 flex-shrink-0">
+          {/* Santa Hat */}
+          <img
+            src="/santa-hat.png"
+            alt="Santa Hat"
+            className="absolute -top-4 -left-1 w-9 h-9 z-20 pointer-events-none transform -rotate-12 drop-shadow-lg filter brightness-110"
+          />
+
+          <div className="w-8 h-8 bg-white text-black flex items-center justify-center rounded-sm font-bold rotate-12 flex-shrink-0 relative z-10 transition-transform group-hover:rotate-0">
             IN
           </div>
           <span className="font-serif text-xl tracking-tight hidden sm:block">InkSight</span>

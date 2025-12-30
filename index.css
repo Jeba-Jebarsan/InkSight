@@ -17,7 +17,7 @@
   animation: fadeIn 0.5s ease-out forwards;
 }
 
-/* Auto-scroll animation for gallery */
+/* Auto-scroll animation for gallery (Right to Left) */
 @keyframes scroll {
   0% {
     transform: translateX(0);
@@ -28,16 +28,41 @@
   }
 }
 
+/* Auto-scroll animation for gallery (Left to Right) */
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-50%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
 .animate-scroll {
   animation: scroll 40s linear infinite;
 }
 
+.animate-scroll-slow {
+  animation: scroll 80s linear infinite;
+}
+
 .animate-scroll-fast {
-  animation: scroll 8s linear infinite;
+  animation: scroll 20s linear infinite;
+}
+
+.animate-scroll-right {
+  animation: scroll-right 40s linear infinite;
+}
+
+.animate-scroll-right-fast {
+  animation: scroll-right 20s linear infinite;
 }
 
 .animate-scroll:hover,
-.animate-scroll-fast:hover {
+.animate-scroll-fast:hover,
+.animate-scroll-right:hover,
+.animate-scroll-right-fast:hover {
   animation-play-state: paused;
 }
 

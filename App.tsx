@@ -6,8 +6,8 @@ import { AppView, TattooSimulation } from './types';
 // Celebrity and tattoo inspiration images - extensive collection
 const GALLERY_IMAGES = [
   // Celebrity tattoos
-  'https://i.pinimg.com/736x/a2/60/c8/a260c8607c703edda21e712b9be14e1a.jpg',
-  'https://www.instyle.com/thmb/ttWjs5eo-rjITFvQ5dtBnqOBh60=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/GettyImages-136926216-f94171e274bd4c6b92785e23692635ae.jpg',
+  'https://i.iheart.com/v3/re/new_assets/62d1a414bf9fb23658936d34?ops=contain(1480,0)',
+  'https://harpersbazaar.com.au/wp-content/uploads/2023/07/GettyImages-1492851445-edited-scaled.jpg',
   'https://www.instyle.com/thmb/XOsvPxKlYpo62JueUvHIAQGDTmI=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/GettyImages-1399971748-3b4835ac392a40e0b33a41bc9d5d6190.jpg',
   'https://www.instyle.com/thmb/Ee8jCbe6-mWIE5dn5VsMm2eAKLI=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/GettyImages-634979854-07a2e5f7b1ab40638ca4bade474f49da.jpg',
   'https://www.instyle.com/thmb/SbOQGUVPtaYmzv8YG0pcZ1Ba2a8=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/84849682_188708915710689_9108558114338795144_n-eeabeb7012aa4f3f9640be889d18ee0c.jpg',
@@ -18,6 +18,9 @@ const GALLERY_IMAGES = [
   'https://www.instyle.com/thmb/PoPXkJmKcDr7_zNKH2oekfYxg7A=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/GettyImages-1138777533-3e303bba6fe347089e7f08cbe1bb53b2.jpg',
   'https://www.instyle.com/thmb/KxPz1rceEJvzgV8kBGIPAviPNkw=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/GettyImages-1199324028-ebba7de88fde4f5fbcb7ee2bd4a2a622.jpg',
   'https://static.wixstatic.com/media/755078_57feda1b85874306bbb54851dff06528~mv2.jpg/v1/fill/w_480,h_720,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/755078_57feda1b85874306bbb54851dff06528~mv2.jpg',
+  'https://i.iheart.com/v3/re/new_assets/62d1a414bf9fb23658936d48?ops=contain(1480,0)',
+  'https://i.iheart.com/v3/re/new_assets/62d1a5ccbf9fb23658936d4d?ops=contain(1480,0)',
+
 
 ];
 
@@ -94,7 +97,7 @@ const App: React.FC = () => {
       case AppView.LANDING:
       default:
         return (
-          <div className="relative min-h-[calc(100vh-80px)] flex flex-col items-center justify-center p-6 overflow-hidden">
+          <div className="relative min-h-[calc(100vh-80px)] flex flex-col items-center justify-center p-6">
             {/* Background elements */}
             <div className="absolute top-1/4 -left-20 w-96 h-96 bg-zinc-800/20 rounded-full blur-[120px] -z-10"></div>
             <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-zinc-700/10 rounded-full blur-[120px] -z-10"></div>
@@ -120,12 +123,12 @@ const App: React.FC = () => {
                 </button>
               </div>
 
-              {/* Fast Auto-scrolling Celebrity Tattoo Gallery */}
-              <div className="mt-12 relative overflow-hidden">
+              {/* Slow Auto-scrolling Celebrity Tattoo Gallery (Right to Left) */}
+              <div className="mt-12 w-full relative overflow-hidden">
                 <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-black to-transparent z-10"></div>
                 <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-black to-transparent z-10"></div>
 
-                <div className="flex gap-3 animate-scroll-fast">
+                <div className="flex gap-3 animate-scroll-slow w-max">
                   {/* First set of images */}
                   {GALLERY_IMAGES.map((img, index) => (
                     <div
